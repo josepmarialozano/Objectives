@@ -1,33 +1,40 @@
-Objective
+Endpoints
+---------
+Objective:
 	Add 	 		Post
 	Update  		Put
+	UpdateStatus	Patch
 	Select  		Get
 	Select All  	Get
 	Delete			Delete
 	
-Trainings	
+Trainings:	
 	Add 			Post
 	Update			Put
 	Select			Get
 	Select All		Get
 	Delete			Delete
 
-TrainingType
+TrainingType:
 	Add 			Post
 	Update			Put
 	Select			Get
 	Select All		Get
 	Delete			Delete
 
+Database
+--------
 Objective:
 	Id					Guid
 	Name				String(100)
 	Description			String(2000)
+	Finished			Boolean
 	
-Trainings:
+Training:
 	Id					Guid
 	ObjectiveId			Guid
-	TrainingTypeId		Guid
+	TrainingTypeId		TrainingType
+	TrainingSensation	TrainingSensation
 	Name				String(100)
 	Description			String(2000)
 	Day					Day
@@ -38,3 +45,19 @@ Trainings:
 TrainingType:
 	Id					Guid
 	Name				String(100)
+
+TrainingSensation:
+	Id					Guid
+	Name				String(100)
+
+Endpoints explained:
+Objective:
+	Add: Name mandatory, Description optional. Status 200. Return Objective.Id
+	Update: Name, Description. Status 201. Return Objective
+	UpdateStatus: Status 201. Return noContent. Change status from Finished = false to true.
+	Select: Id mandatory. Status 202. Return Objective
+	Select All: ItemsPerPage optional, Page optional. Status 202. Return List of Objective
+	Delete: Id mandatory. Status 203. Return noContent. Delete only if it doesn't have trainings.
+Trainings:
+	Add: Name, Day, Hour, Time, Speed mandatory, Description optional. Status 200. Return Training.Id
+	Update: TrainingType, TrainingSensation, Name, Description, Day, Hour, Time, Speed. Status 201. Return Training.

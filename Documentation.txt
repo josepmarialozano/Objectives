@@ -1,0 +1,40 @@
+Objective
+	Add 	 		Post
+	Update  		Put
+	Select  		Get
+	Select All  	Get
+	Delete			Delete
+	
+Trainings	
+	Add 			Post
+	Update			Put
+	Select			Get
+	Select All		Get
+	Delete			Delete
+
+TrainingType
+	Add 			Post
+	Update			Put
+	Select			Get
+	Select All		Get
+	Delete			Delete
+
+Objective:
+	Id					Guid
+	Name				String(100)
+	Description			String(2000)
+	
+Trainings:
+	Id					Guid
+	ObjectiveId			Guid
+	TrainingTypeId		Guid
+	Name				String(100)
+	Description			String(2000)
+	Day					Day
+	Hour				Hour
+	Time				Integer
+	Speed				Double
+
+TrainingType:
+	Id					Guid
+	Name				String(100)

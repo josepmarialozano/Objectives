@@ -1,0 +1,12 @@
+obj
+bin
+out
+lcov.info
+codeship.aes
+.aws.env
+*.feature.cs
+*-secrets.env.yml
+.version
+.aws.*.env
+**/.vs
+*.user

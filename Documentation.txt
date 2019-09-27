@@ -8,7 +8,7 @@ Objective:
 	Select All  	Get
 	Delete			Delete
 	
-Trainings:	
+Training:	
 	Add 			Post
 	Update			Put
 	Select			Get
@@ -16,6 +16,13 @@ Trainings:
 	Delete			Delete
 
 TrainingType:
+	Add 			Post
+	Update			Put
+	Select			Get
+	Select All		Get
+	Delete			Delete
+	
+TrainingSensation:
 	Add 			Post
 	Update			Put
 	Select			Get
@@ -61,3 +68,20 @@ Objective:
 Trainings:
 	Add: Name, Day, Hour, Time, Speed mandatory, Description optional. Status 200. Return Training.Id
 	Update: TrainingType, TrainingSensation, Name, Description, Day, Hour, Time, Speed. Status 201. Return Training.
+	Select: Id mandatory. Status 202. Return Training
+	Select All: ObjectiveId mandatory, ItemsPerPage and Page optionl. Status 202. Return List of Training
+	Delete: Id mandatory. Status 203. Return noContent
+TrainingType:
+	Add: Name mandatory. Status 200. Return TrainingType.Id
+	Update: Name. Status 201. Return TrainingType
+	Select: Id mandatory. Status 202. Return TrainingType
+	Select All: ItemsPerPage, Page optional. Status 202. Return List of TrainingType
+	Delete: Id mandatory. Status 203. Return noContent. Delete only if it isn't assigned to any training
+TrainingSensation:
+	Add: Name mandatory. Status 200. Return TrainingSensation.Id
+	Update: Name. Status 201. Return TrainingSensation
+	Select: Id mandatory. Status 202. Return TrainingSensation
+	Select All: ItemsPerPage, Page optional. Status 202. Return List of TrainingSensation
+	Delete: Id mandatory. Status 203. Return noContent. Delete only if it isn't assigned to any training
+
+	

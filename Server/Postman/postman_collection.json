@@ -1,0 +1,619 @@
+{
+	"info": {
+		"_postman_id": "f3d7455f-4aae-40cd-b811-18e708369256",
+		"name": "Objectives",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Objective",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Objective?ItemsPerPage=5&Page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Objective"
+							],
+							"query": [
+								{
+									"key": "ItemsPerPage",
+									"value": "5"
+								},
+								{
+									"key": "Page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Objective/5f7591b8-ea3b-4dfc-9a29-c1c246977596",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Objective",
+								"5f7591b8-ea3b-4dfc-9a29-c1c246977596"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "Pepe",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"Name\":\"juan\",\n\"Description\":\"description juan\"}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Objective",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Objective"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"Name\":\"juan\",\n\"Description\":\"description juan\"}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Objective/5f7591b8-ea3b-4dfc-9a29-c1c246977596",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Objective",
+								"5f7591b8-ea3b-4dfc-9a29-c1c246977596"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateStatus",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Objective/5f7591b8-ea3b-4dfc-9a29-c1c246977596",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Objective",
+								"5f7591b8-ea3b-4dfc-9a29-c1c246977596"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Objective/5f7591b8-ea3b-4dfc-9a29-c1c246977596",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Objective",
+								"5f7591b8-ea3b-4dfc-9a29-c1c246977596"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Training",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Training?ObjectiveId=785712c5-9630-4eac-8a80-be3c661304fa&ItemsPerPage=5&Page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Training"
+							],
+							"query": [
+								{
+									"key": "ObjectiveId",
+									"value": "785712c5-9630-4eac-8a80-be3c661304fa"
+								},
+								{
+									"key": "ItemsPerPage",
+									"value": "5"
+								},
+								{
+									"key": "Page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Training/5f7591b8-ea3b-4dfc-9a29-c1c246977596",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Training",
+								"5f7591b8-ea3b-4dfc-9a29-c1c246977596"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "Pepe",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"Name\":\"juan\",\n\"Description\":\"description juan\"}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Training",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Training"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"Name\":\"juan\",\n\"Description\":\"description juan\"}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Training/5f7591b8-ea3b-4dfc-9a29-c1c246977596",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Training",
+								"5f7591b8-ea3b-4dfc-9a29-c1c246977596"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Training/5f7591b8-ea3b-4dfc-9a29-c1c246977596",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Training",
+								"5f7591b8-ea3b-4dfc-9a29-c1c246977596"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "TrainingType",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/TrainingType?ItemsPerPage=5&Page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"TrainingType"
+							],
+							"query": [
+								{
+									"key": "ItemsPerPage",
+									"value": "5"
+								},
+								{
+									"key": "Page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/TrainingType/5f7591b8-ea3b-4dfc-9a29-c1c246977596",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"TrainingType",
+								"5f7591b8-ea3b-4dfc-9a29-c1c246977596"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "Pepe",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"Name\":\"juan\",\n\"Description\":\"description juan\"}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/TrainingType",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"TrainingType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"Name\":\"juan\",\n\"Description\":\"description juan\"}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/TrainingType/5f7591b8-ea3b-4dfc-9a29-c1c246977596",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"TrainingType",
+								"5f7591b8-ea3b-4dfc-9a29-c1c246977596"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/TrainingType/5f7591b8-ea3b-4dfc-9a29-c1c246977596",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"TrainingType",
+								"5f7591b8-ea3b-4dfc-9a29-c1c246977596"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "TrainingSensation",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/TrainingSensation?ItemsPerPage=5&Page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"TrainingSensation"
+							],
+							"query": [
+								{
+									"key": "ItemsPerPage",
+									"value": "5"
+								},
+								{
+									"key": "Page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/TrainingSensation/5f7591b8-ea3b-4dfc-9a29-c1c246977596",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"TrainingSensation",
+								"5f7591b8-ea3b-4dfc-9a29-c1c246977596"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "Pepe",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"Name\":\"juan\",\n\"Description\":\"description juan\"}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/TrainingSensation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"TrainingSensation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"Name\":\"juan\",\n\"Description\":\"description juan\"}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/TrainingSensation/5f7591b8-ea3b-4dfc-9a29-c1c246977596",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"TrainingSensation",
+								"5f7591b8-ea3b-4dfc-9a29-c1c246977596"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/TrainingSensation/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"TrainingSensation",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

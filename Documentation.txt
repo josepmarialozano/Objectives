@@ -69,7 +69,7 @@ Trainings:
 	Add: Name, Day, Hour, Time, Speed mandatory, Description optional. Status 200. Return Training.Id
 	Update: TrainingType, TrainingSensation, Name, Description, Day, Hour, Time, Speed. Status 201. Return Training.
 	Select: Id mandatory. Status 202. Return Training
-	Select All: ObjectiveId mandatory, ItemsPerPage and Page optionl. Status 202. Return List of Training
+	Select All: ObjectiveId mandatory, ItemsPerPage and Page optional. Status 202. Return List of Training
 	Delete: Id mandatory. Status 203. Return noContent
 TrainingType:
 	Add: Name mandatory. Status 200. Return TrainingType.Id

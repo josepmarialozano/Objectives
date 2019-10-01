@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{66A3A987-2D39-4E22-851A-89D9A2935523}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DtoEntities", "Entities\DtoEntities.csproj", "{66A3A987-2D39-4E22-851A-89D9A2935523}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host\Host.csproj", "{68CE29A1-67C6-40F7-B056-17D20EBEF649}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Host", "Host\Host.csproj", "{68CE29A1-67C6-40F7-B056-17D20EBEF649}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

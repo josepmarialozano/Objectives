@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DtoEntities", "Entities\DtoEntities.csproj", "{66A3A987-2D39-4E22-851A-89D9A2935523}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DtoEntity", "Entities\DtoEntity.csproj", "{66A3A987-2D39-4E22-851A-89D9A2935523}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Host", "Host\Host.csproj", "{68CE29A1-67C6-40F7-B056-17D20EBEF649}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataEntities", "DataEntities\DataEntities.csproj", "{3CCE9936-6100-4386-9407-77F1F805DA48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataEntity", "DataEntities\DataEntity.csproj", "{3CCE9936-6100-4386-9407-77F1F805DA48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{5A4BF3A7-83B1-473C-B0CD-24BDAD9BE524}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic", "Logic\Logic.csproj", "{5A4BF3A7-83B1-473C-B0CD-24BDAD9BE524}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryInterface", "RepositoryInterfaces\RepositoryInterface.csproj", "{63ACBA23-6C26-4031-9A26-6179DC87E481}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5A4BF3A7-83B1-473C-B0CD-24BDAD9BE524}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A4BF3A7-83B1-473C-B0CD-24BDAD9BE524}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A4BF3A7-83B1-473C-B0CD-24BDAD9BE524}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63ACBA23-6C26-4031-9A26-6179DC87E481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63ACBA23-6C26-4031-9A26-6179DC87E481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63ACBA23-6C26-4031-9A26-6179DC87E481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63ACBA23-6C26-4031-9A26-6179DC87E481}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

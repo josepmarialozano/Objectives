@@ -1,4 +1,4 @@
-﻿namespace Entities {
+﻿namespace DataEntity {
     using System;
 
     public class BaseEntity {

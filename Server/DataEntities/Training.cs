@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entities {
+namespace DataEntity {
     public class Training : BaseEntity {
         public Guid ObjectiveId { get; set; }
         public TrainingType TrainingType { get; set; }

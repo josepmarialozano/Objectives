@@ -1,4 +1,4 @@
-﻿namespace Entities {
+﻿namespace DataEntity {
     public class TrainingSensation: BaseEntity {
     }
 }

@@ -1,7 +1,7 @@
-﻿namespace RepositoryInterface.TrainingSensation {
+﻿namespace Data.RepositoryInterface.TrainingSensation {
     using DataEntity;
     using System;
-    interface ITrainingSensationSelect {
-        TrainingSensation Select(Guid TrainingSensationId);
+    public interface ITrainingSensationSelect {
+        TrainingSensation Select(Guid trainingSensationId);
     }
 }

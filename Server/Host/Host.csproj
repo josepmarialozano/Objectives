@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Entities\DtoEntity.csproj" />
+    <ProjectReference Include="..\LogicSingleton\LogicSingleton.csproj" />
   </ItemGroup>
 
 </Project>

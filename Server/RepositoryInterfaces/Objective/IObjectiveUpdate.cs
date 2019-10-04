@@ -1,7 +1,7 @@
-﻿namespace RepositoryInterface.Objective {
+﻿namespace Data.RepositoryInterface.Objective {
     using DataEntity;
     public interface IObjectiveUpdate {
-        Objective Update(Objective Objective);
+        Objective Update(Objective objective);
 
     }
 }

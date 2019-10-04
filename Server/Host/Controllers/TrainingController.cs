@@ -1,7 +1,7 @@
-﻿namespace Host.Controllers {
+﻿namespace Controller.Host.Controllers {
     using System;
     using System.Collections.Generic;
-    using DataEntity;
+    using Controller.DtoEntity;
     using Microsoft.AspNetCore.Mvc;
 
     [Route("api/[controller]")]

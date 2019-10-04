@@ -1,8 +1,8 @@
-﻿namespace RepositoryInterface.Objective {
+﻿namespace Data.RepositoryInterface.Objective {
     using DataEntity;
     using System;
 
-    interface IObjectiveSelect {
-        Objective Select(Guid ObjectiveId);
+    public interface IObjectiveSelect {
+        Objective Select(Guid objectiveId);
     }
 }

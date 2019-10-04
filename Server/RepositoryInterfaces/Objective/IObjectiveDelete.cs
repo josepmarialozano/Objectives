@@ -1,7 +1,7 @@
-﻿namespace RepositoryInterface.Objective {
+﻿namespace Data.RepositoryInterface.Objective {
     using System;
 
-    interface IObjectiveDelete {
-        bool Delete(Guid ObjectiveId);
+    public interface IObjectiveDelete {
+        bool Delete(Guid objectiveId);
     }
 }

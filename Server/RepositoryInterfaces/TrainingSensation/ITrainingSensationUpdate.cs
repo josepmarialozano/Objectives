@@ -1,6 +1,6 @@
-﻿namespace RepositoryInterface.TrainingSensation {
+﻿namespace Data.RepositoryInterface.TrainingSensation {
     using DataEntity;
-    interface ITrainingSensationUpdate {
-        TrainingSensation Update(TrainingSensation TrainingSensation);
+    public interface ITrainingSensationUpdate {
+        TrainingSensation Update(TrainingSensation trainingSensation);
     }
 }

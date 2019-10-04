@@ -1,7 +1,7 @@
-﻿namespace RepositoryInterface.TrainingType {
+﻿namespace Data.RepositoryInterface.TrainingType {
     using DataEntity;
     using System;
-    interface ITrainingTypeSelect {
-        TrainingType Select(Guid TrainingTypeId);
+    public interface ITrainingTypeSelect {
+        TrainingType Select(Guid trainingTypeId);
     }
 }

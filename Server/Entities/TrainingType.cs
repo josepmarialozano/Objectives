@@ -1,4 +1,4 @@
-﻿namespace DtoEntity {
+﻿namespace Controller.DtoEntity {
     public class TrainingType: BaseEntity {
     }
 }

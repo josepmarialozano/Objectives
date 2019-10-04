@@ -1,8 +1,8 @@
-﻿namespace RepositoryInterface.Training {
+﻿namespace Data.RepositoryInterface.Training {
     using DataEntity;
     using System;
 
-    interface ITrainingAdd {
-        Guid Add(Training Training);
+    public interface ITrainingAdd {
+        Guid Add(Training training);
     }
 }

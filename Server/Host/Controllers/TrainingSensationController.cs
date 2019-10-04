@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using DataEntity;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿namespace Controller.Host.Controllers {
+    using System;
+    using System.Collections.Generic;
+    using Controller.DtoEntity;
+    using Microsoft.AspNetCore.Mvc;
 
-namespace Host.Controllers
-{
     [Route("api/[controller]")]
     [ApiController]
-    public class TrainingSensationController : ControllerBase
-    {
+    public class TrainingSensationController : ControllerBase {
         // GET api/TrainingSensation
         [HttpGet()]
         public ActionResult<IEnumerable<string>> GetAll([FromQuery]int ItemsPerPage, [FromQuery]int Page) {

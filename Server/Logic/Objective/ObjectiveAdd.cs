@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Logic.Objective {
-   public class Add {
+namespace Logics.Logic.Objective {
+   public class ObjectiveAdd {
     }
 }

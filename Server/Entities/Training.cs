@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace Controller.DtoEntity {
+    using System;
 
-namespace DtoEntity {
     public class Training : BaseEntity {
         public Guid ObjectiveId { get; set; }
         public TrainingType TrainingType { get; set; }
@@ -109,11 +107,11 @@ namespace DtoEntity {
         }
         public double Speed { get; set; }
 
-        private bool DateCorrect(int Day, int Month, int Year) {
-            if (Day == -1 || Month == -1 || Year == -1)
+        private bool DateCorrect(int day, int month, int year) {
+            if (day == -1 || month == -1 || year == -1)
                 return true;
             try {
-                DateTime date = new DateTime(Year, Month, Day);
+                DateTime date = new DateTime(year, month, day);
                 return true;
             }
             catch (Exception) {
@@ -121,11 +119,11 @@ namespace DtoEntity {
             }
         }
 
-        private bool HourCorrect(int Hour, int Minute, int Second) {
-            if (Hour == -1 || Minute == -1 || Second == -1)
+        private bool HourCorrect(int hour, int minute, int second) {
+            if (hour == -1 || minute == -1 || second == -1)
                 return true;
             try {
-                if (Hour > 23 || Minute > 59 || Second > 59)
+                if (hour > 23 || minute > 59 || second > 59)
                     return false;
                 return true;
             }

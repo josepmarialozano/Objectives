@@ -1,49 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using DataEntity;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿namespace Controller.Host.Controllers {
+    using System;
+    using System.Collections.Generic;
+    using Controller.DtoEntity;
+    using Microsoft.AspNetCore.Mvc;
+    using LogicSingleton;
 
-namespace Host.Controllers {
     [Route("api/[controller]")]
     [ApiController]
     public class TrainingTypeController : ControllerBase {
         // GET api/TrainingType
         [HttpGet()]
-        public ActionResult<IEnumerable<string>> GetAll([FromQuery]int ItemsPerPage, [FromQuery]int Page) {
-            return new string[] { "TrainingType Get All" };
+        public ActionResult<IEnumerable<TrainingType>> GetAll([FromQuery]int itemsPerPage, [FromQuery]int page) {
+            return Singleton.TrainingTypeSelectAll.ExecuteSelectAll(itemsPerPage, page);
         }
 
         // GET api/TrainingType/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(Guid Id) {
-            return "TrainingType Get by Id";
+        public ActionResult<TrainingType> Get(Guid id) {
+            return Singleton.TrainingTypeSelect.ExecuteSelect(id);
         }
 
         // POST api/TrainingType
         [HttpPost]
-        public ActionResult<string> Add([FromBody]TrainingType TrainingType) {
-            return "TrainingType Post";
+        public ActionResult<Guid> Add([FromBody]TrainingType trainingType) {
+            return Singleton.TrainingTypeAdd.ExecuteAdd(trainingType);
         }
 
         // PUT api/TrainingType/5
-        [HttpPut("{Id}")]
-        public ActionResult<string> Update(Guid Id, [FromBody]TrainingType TrainingType) {
-            return "TrainingType Put";
-        }
-
-        // PATCH api/TrainingType/5
-        [HttpPatch("{Id}")]
-        public ActionResult<string> UpdateStatus(Guid Id) {
-            return "TrainingType Patch";
+        [HttpPut]
+        public ActionResult<TrainingType> Update([FromBody]TrainingType trainingType) {
+            return Singleton.TrainingTypeUpdate.ExecuteUpdate(trainingType);
         }
 
         // DELETE api/TrainingType/5
         [HttpDelete("{Id}")]
-        public ActionResult<string> Delete(Guid Id) {
-            return "TrainingType Delete";
+        public void Delete(Guid id) {
+            Singleton.TrainingTypeDelete.ExecuteDelete(id);
         }
 
     }

@@ -1,4 +1,4 @@
-﻿namespace DtoEntity {
+﻿namespace Controller.DtoEntity {
     using System;
 
     public class BaseEntity {

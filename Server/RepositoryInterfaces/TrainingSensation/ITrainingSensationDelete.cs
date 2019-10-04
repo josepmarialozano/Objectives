@@ -1,6 +1,6 @@
-﻿namespace RepositoryInterface.TrainingSensation {
+﻿namespace Data.RepositoryInterface.TrainingSensation {
     using System;
-    interface ITrainingSensationDelete {
-        bool Delete(Guid TrainingSensationId);
+    public interface ITrainingSensationDelete {
+        bool Delete(Guid trainingSensationId);
     }
 }

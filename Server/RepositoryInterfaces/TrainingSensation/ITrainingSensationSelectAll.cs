@@ -1,8 +1,8 @@
-﻿namespace RepositoryInterface.TrainingSensation {
+﻿namespace Data.RepositoryInterface.TrainingSensation {
     using DataEntity;
     using System.Collections.Generic;
 
-    interface ITrainingSensationSelectAll {
-        List<TrainingSensation> SelectAll(int ItemsPerPage, int Page);
+    public interface ITrainingSensationSelectAll {
+        List<TrainingSensation> SelectAll(int itemsPerPage, int page);
     }
 }

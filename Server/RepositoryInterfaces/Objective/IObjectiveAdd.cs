@@ -1,8 +1,8 @@
-﻿namespace RepositoryInterface.Objective {
+﻿namespace Data.RepositoryInterface.Objective {
     using System;
     using DataEntity;
 
     public interface IObjectiveAdd {
-        Guid Add(Objective Objective);
+        Guid Add(Objective objective);
     }
 }

@@ -1,7 +1,7 @@
-﻿namespace RepositoryInterface.Objective {
+﻿namespace Data.RepositoryInterface.Objective {
     using System;
 
     interface IObjectiveUpdateStatus {
-        void UpdateStatus(Guid ObjectiveId);
+        void UpdateStatus(Guid objectiveId);
     }
 }

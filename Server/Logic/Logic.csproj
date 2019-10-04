@@ -4,4 +4,11 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DataEntities\DataEntity.csproj" />
+    <ProjectReference Include="..\Entities\DtoEntity.csproj" />
+    <ProjectReference Include="..\RepositoryInterfaces\RepositoryInterface.csproj" />
+    <ProjectReference Include="..\Singleton\DataSingleton.csproj" />
+  </ItemGroup>
+
 </Project>

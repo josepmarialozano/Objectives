@@ -1,6 +1,6 @@
-﻿namespace RepositoryInterface.TrainingType {
+﻿namespace Data.RepositoryInterface.TrainingType {
     using DataEntity;
-    interface ITrainingTypeUpdate {
-        TrainingType Update(TrainingType TrainingType);
+    public interface ITrainingTypeUpdate {
+        TrainingType Update(TrainingType trainingType);
     }
 }

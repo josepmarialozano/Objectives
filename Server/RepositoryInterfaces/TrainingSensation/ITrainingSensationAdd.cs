@@ -1,8 +1,8 @@
-﻿namespace RepositoryInterface.TrainingSensation {
+﻿namespace Data.RepositoryInterface.TrainingSensation {
     using System;
     using DataEntity;
 
-    interface ITrainingSensationAdd {
-        Guid Add(TrainingSensation TrainingSensation);
+    public interface ITrainingSensationAdd {
+        Guid Add(TrainingSensation trainingSensation);
     }
 }

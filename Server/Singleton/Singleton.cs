@@ -1,8 +1,11 @@
 ﻿namespace Data.DataSingleton {
     using RepositoryInterface.TrainingType;
     using MongoDB.TrainingType;
+    using Data.RepositoryInterface.TrainingSensation;
+    using MongoDB.TrainingSensation;
 
     public class Singleton {
+        #region TrainingType
         private static ITrainingTypeAdd _TrainingTypeAdd;
         private static ITrainingTypeUpdate _TrainingTypeUpdate;
         private static ITrainingTypeSelect _TrainingTypeSelect;
@@ -16,7 +19,7 @@
                 return _TrainingTypeAdd;
             }
         }
-        
+
         public static ITrainingTypeUpdate TrainingTypeUpdate {
             get {
                 if (_TrainingTypeUpdate == null)
@@ -24,7 +27,7 @@
                 return _TrainingTypeUpdate;
             }
         }
-        
+
         public static ITrainingTypeSelect TrainingTypeSelect {
             get {
                 if (_TrainingTypeSelect == null)
@@ -48,5 +51,53 @@
                 return _TrainingTypeDelete;
             }
         }
+        #endregion
+        #region TrainingSensation
+        private static ITrainingSensationAdd _TrainingSensationAdd;
+        private static ITrainingSensationSelect _TrainingSensationSelect;
+        private static ITrainingSensationSelectAll _TrainingSensationSelectAll;
+        private static ITrainingSensationUpdate _TrainingSensationUpdate;
+        private static ITrainingSensationDelete _TrainingSensationDelete;
+
+        public static ITrainingSensationAdd TrainingSensationAdd {
+            get {
+                if (_TrainingSensationAdd == null)
+                    _TrainingSensationAdd = new TrainingSensationAdd();
+                return _TrainingSensationAdd;
+            }
+        }
+
+        public static ITrainingSensationSelect TrainingSensationSelect {
+            get {
+                if (_TrainingSensationSelect == null)
+                    _TrainingSensationSelect = new TrainingSensationSelect();
+                return _TrainingSensationSelect;
+            }
+        }
+
+        public static ITrainingSensationSelectAll TrainingSensationSelectAll {
+            get {
+                if (_TrainingSensationSelectAll == null)
+                    _TrainingSensationSelectAll = new TrainingSensationSelectAll();
+                return _TrainingSensationSelectAll;
+            }
+        }
+
+        public static ITrainingSensationUpdate TrainingSensationUpdate {
+            get {
+                if (_TrainingSensationUpdate == null)
+                    _TrainingSensationUpdate = new TrainingSensationUpdate();
+                return _TrainingSensationUpdate;
+            }
+        }
+
+        public static ITrainingSensationDelete TrainingSensationDelete {
+            get {
+                if (_TrainingSensationDelete == null)
+                    _TrainingSensationDelete = new TrainingSensationDelete();
+                return _TrainingSensationDelete;
+            }
+        }
+        #endregion
     }
 }

@@ -3,6 +3,6 @@
     using DataEntity;
 
     public interface ITrainingSensationAdd {
-        Guid Add(TrainingSensation trainingSensation);
+        TrainingSensation Add(TrainingSensation trainingSensation);
     }
 }

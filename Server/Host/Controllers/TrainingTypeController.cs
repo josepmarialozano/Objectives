@@ -28,7 +28,8 @@
 
         // PUT api/TrainingType/5
         [HttpPut]
-        public ActionResult<TrainingType> Update([FromBody]TrainingType trainingType) {
+        public ActionResult<TrainingType> Update(Guid id, [FromBody]TrainingType trainingType) {
+            trainingType.Id = id;
             return Singleton.TrainingTypeUpdate.ExecuteUpdate(trainingType);
         }
 

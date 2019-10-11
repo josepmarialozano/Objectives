@@ -57,6 +57,8 @@
         private static ITrainingSensationSelect _TrainingSensationSelect;
         private static ITrainingSensationSelectAll _TrainingSensationSelectAll;
         private static ITrainingSensationUpdate _TrainingSensationUpdate;
+        private static ITrainingSensationDelete _TrainingSensationDelete;
+
         public static ITrainingSensationAdd TrainingSensationAdd {
             get {
                 if (_TrainingSensationAdd == null)
@@ -86,6 +88,14 @@
                 if (_TrainingSensationUpdate == null)
                     _TrainingSensationUpdate = new TrainingSensationUpdate();
                 return _TrainingSensationUpdate;
+            }
+        }
+
+        public static ITrainingSensationDelete TrainingSensationDelete {
+            get {
+                if (_TrainingSensationDelete == null)
+                    _TrainingSensationDelete = new TrainingSensationDelete();
+                return _TrainingSensationDelete;
             }
         }
         #endregion

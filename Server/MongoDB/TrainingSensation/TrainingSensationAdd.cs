@@ -3,7 +3,7 @@
     using Data.DataEntity;
     using Data.RepositoryInterface.TrainingSensation;
     public class TrainingSensationAdd : ITrainingSensationAdd {
-        public Guid Add(TrainingSensation trainingSensation) {
+        public TrainingSensation Add(TrainingSensation trainingSensation) {
             throw new NotImplementedException();
         }
     }

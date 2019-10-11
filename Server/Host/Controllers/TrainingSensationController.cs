@@ -2,6 +2,7 @@
     using System;
     using System.Collections.Generic;
     using Controller.DtoEntity;
+    using LogicSingleton;
     using Microsoft.AspNetCore.Mvc;
 
     [Route("api/[controller]")]
@@ -9,38 +10,33 @@
     public class TrainingSensationController : ControllerBase {
         // GET api/TrainingSensation
         [HttpGet()]
-        public ActionResult<IEnumerable<string>> GetAll([FromQuery]int ItemsPerPage, [FromQuery]int Page) {
-            return new string[] { "TrainingSensation Get All" };
+        public ActionResult<List<TrainingSensation>> GetAll([FromQuery]int itemsPerPage, [FromQuery]int page) {
+            return Singleton.TrainingSensationSelectAll.ExecuteSelectAll(itemsPerPage, page);
         }
 
         // GET api/TrainingSensation/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(Guid Id) {
-            return "TrainingSensation Get by Id";
+        public ActionResult<TrainingSensation> Get(Guid id) {
+            return Singleton.TrainingSensationSelect.ExecuteSelect(id);
         }
 
         // POST api/TrainingSensation
         [HttpPost]
-        public ActionResult<string> Add([FromBody]TrainingSensation TrainingSensation) {
-            return "TrainingSensation Post";
+        public ActionResult<Guid> Add([FromBody]TrainingSensation trainingSensation) {
+            return Singleton.TrainingSensationAdd.ExecuteAdd(trainingSensation);
         }
 
         // PUT api/TrainingSensation/5
         [HttpPut("{Id}")]
-        public ActionResult<string> Update(Guid Id, [FromBody]TrainingSensation TrainingSensation) {
-            return "TrainingSensation Put";
-        }
-
-        // PATCH api/TrainingSensation/5
-        [HttpPatch("{Id}")]
-        public ActionResult<string> UpdateStatus(Guid Id) {
-            return "TrainingSensation Patch";
+        public ActionResult<TrainingSensation> Update(Guid id, [FromBody]TrainingSensation trainingSensation) {
+            trainingSensation.Id = id;
+            return Singleton.TrainingSensationUpdate.ExecuteUpdate(trainingSensation);
         }
 
         // DELETE api/TrainingSensation/5
         [HttpDelete("{Id}")]
-        public ActionResult<string> Delete(Guid Id) {
-            return "TrainingSensation Delete";
+        public void Delete(Guid id) {
+            Singleton.TrainingSensationDelete.ExecuteDelete(id);
         }
 
     }

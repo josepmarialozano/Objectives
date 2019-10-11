@@ -1,6 +1,8 @@
 ﻿namespace Util.Common.Entities {
     using System;
-    public class CommonGenericData<DataEntity, ControllerEntity> where DataEntity : new() where ControllerEntity : new() {
+    using System.Collections.Generic;
+
+    public class CommonGeneric<DataEntity, ControllerEntity> where DataEntity : new() where ControllerEntity : new() {
         public DataEntity ToDataEntity(ControllerEntity controllerEntity) {
             DataEntity dataEntity = new DataEntity();
             Type controllerType = controllerEntity.GetType();
@@ -19,6 +21,10 @@
                 controllerType.GetProperty(item.Name).SetValue(controllerEntity, dataType.GetProperty(item.Name).GetValue(dataEntity));
             };
             return controllerEntity;
+        }
+
+        public List<ControllerEntity> ToDtoEntityList(List<DataEntity> dataEntityList) {
+            return dataEntityList.ConvertAll(item => ToDtoEntity(item));
         }
     }
 }

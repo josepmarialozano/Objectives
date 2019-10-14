@@ -14,6 +14,14 @@
             }
         }
 
+        public static CommonGeneric<Data.DataEntity.TrainingSensation, Controller.DtoEntity.TrainingSensation> TrainingSensationCommon {
+            get {
+                if (_TrainingSensationCommon == null)
+                    _TrainingSensationCommon = new CommonGeneric<Data.DataEntity.TrainingSensation, Controller.DtoEntity.TrainingSensation>();
+                return _TrainingSensationCommon;
+            }
+        }
+
         public static CommonGeneric<Data.DataEntity.Training, Controller.DtoEntity.Training> TrainingCommon {
             get {
                 if (_TrainingCommon == null)

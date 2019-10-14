@@ -1,6 +1,6 @@
 ﻿namespace Data.RepositoryInterface.Training {
     using System;
-    interface ITrainingDelete {
+    public interface ITrainingDelete {
         bool Delete(Guid trainingId);
     }
 }

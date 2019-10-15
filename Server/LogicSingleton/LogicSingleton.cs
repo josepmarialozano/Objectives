@@ -106,43 +106,43 @@
         private static TrainingUpdate _TrainingUpdate;
         private static TrainingDelete _TrainingDelete;
 
-        public static TrainingSensationAdd TrainingSensationAdd {
+        public static TrainingAdd TrainingAdd {
             get {
-                if (_TrainingSensationAdd == null)
-                    _TrainingSensationAdd = new TrainingSensationAdd();
-                return _TrainingSensationAdd;
+                if (_TrainingAdd == null)
+                    _TrainingAdd = new TrainingAdd();
+                return _TrainingAdd;
             }
         }
 
-        public static TrainingSensationSelectAll TrainingSensationSelectAll {
+        public static TrainingSelectAll TrainingSelectAll {
             get {
-                if (_TrainingSensationSelectAll == null)
-                    _TrainingSensationSelectAll = new TrainingSensationSelectAll();
-                return _TrainingSensationSelectAll;
+                if (_TrainingSelectAll == null)
+                    _TrainingSelectAll = new TrainingSelectAll();
+                return _TrainingSelectAll;
             }
         }
 
-        public static TrainingSensationSelect TrainingSensationSelect {
+        public static TrainingSelect TrainingSelect {
             get {
-                if (_TrainingSensationSelect == null)
-                    _TrainingSensationSelect = new TrainingSensationSelect();
-                return _TrainingSensationSelect;
+                if (_TrainingSelect == null)
+                    _TrainingSelect = new TrainingSelect();
+                return _TrainingSelect;
             }
         }
 
-        public static TrainingSensationUpdate TrainingSensationUpdate {
+        public static TrainingUpdate TrainingUpdate {
             get {
-                if (_TrainingSensationUpdate == null)
-                    _TrainingSensationUpdate = new TrainingSensationUpdate();
-                return _TrainingSensationUpdate;
+                if (_TrainingUpdate == null)
+                    _TrainingUpdate = new TrainingUpdate();
+                return _TrainingUpdate;
             }
         }
 
-        public static TrainingSensationDelete TrainingSensationDelete {
+        public static TrainingDelete TrainingDelete {
             get {
-                if (_TrainingSensationDelete == null)
-                    _TrainingSensationDelete = new TrainingSensationDelete();
-                return _TrainingSensationDelete;
+                if (_TrainingDelete == null)
+                    _TrainingDelete = new TrainingDelete();
+                return _TrainingDelete;
             }
         }
         #endregion

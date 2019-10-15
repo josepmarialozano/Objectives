@@ -9,38 +9,37 @@
     public class ObjectiveController : ControllerBase {
         // GET api/Objective
         [HttpGet()]
-        public ActionResult<IEnumerable<string>> GetAll([FromQuery]int ItemsPerPage, [FromQuery]int Page) {
-            return new string[] { "Objective Get All" };
+        public ActionResult<List<Objective>> GetAll([FromQuery]int ItemsPerPage, [FromQuery]int Page) {
+            return null;
         }
 
         // GET api/Objective/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(Guid Id) {
-            return "Objective Get by Id";
+        public ActionResult<Objective> Get(Guid Id) {
+            return null;
         }
 
         // POST api/Objective
         [HttpPost]
-        public ActionResult<string> Add([FromBody]Objective Objective) {
-            return "Objective Post";
+        public ActionResult<Guid> Add([FromBody]Objective Objective) {
+            return Guid.Empty;
         }
 
         // PUT api/Objective/5
-        [HttpPut("{Id}")]
-        public ActionResult<string> Update(Guid Id, [FromBody]Objective Objective) {
-            return "Objective Put";
+        [HttpPut]
+        public ActionResult<Objective> Update([FromBody]Objective Objective) {
+            return null;
         }
 
         // PATCH api/Objective/5
         [HttpPatch("{Id}")]
-        public ActionResult<string> UpdateStatus(Guid Id) {
-            return "Objective Patch";
+        public void UpdateStatus(Guid Id) {
+
         }
 
         // DELETE api/Objective/5
         [HttpDelete("{Id}")]
-        public ActionResult<string> Delete(Guid Id) {
-            return "Objective Delete";
+        public void Delete(Guid Id) {
         }
     }
 }

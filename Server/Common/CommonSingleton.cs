@@ -5,6 +5,7 @@
         private static CommonGeneric<Data.DataEntity.TrainingType, Controller.DtoEntity.TrainingType> _TrainingTypeCommon;
         private static CommonGeneric<Data.DataEntity.TrainingSensation, Controller.DtoEntity.TrainingSensation> _TrainingSensationCommon;
         private static CommonGeneric<Data.DataEntity.Training, Controller.DtoEntity.Training> _TrainingCommon;
+        private static CommonGeneric<Data.DataEntity.Objective, Controller.DtoEntity.Objective> _ObjectiveCommon;
 
         public static CommonGeneric<Data.DataEntity.TrainingType, Controller.DtoEntity.TrainingType> TrainingTypeCommon {
             get {
@@ -30,6 +31,12 @@
             }
         }
 
-
+        public static CommonGeneric<Data.DataEntity.Objective, Controller.DtoEntity.Objective> ObjectiveCommon {
+            get {
+                if (_ObjectiveCommon == null)
+                    _ObjectiveCommon = new CommonGeneric<Data.DataEntity.Objective, Controller.DtoEntity.Objective>();
+                return _ObjectiveCommon;
+            }
+        }
     }
 }

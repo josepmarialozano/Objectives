@@ -3,6 +3,6 @@
     using DataEntity;
 
     public interface IObjectiveAdd {
-        Guid Add(Objective objective);
+        Objective Add(Objective objective);
     }
 }

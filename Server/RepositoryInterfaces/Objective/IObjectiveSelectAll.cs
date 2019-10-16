@@ -1,7 +1,7 @@
 ﻿namespace Data.RepositoryInterface.Objective {
     using System.Collections.Generic;
     using DataEntity;
-    interface IObjectiveSelectAll {
+    public interface IObjectiveSelectAll {
         List<Objective> SelectAll(int itemsPerPage, int page);
     }
 }

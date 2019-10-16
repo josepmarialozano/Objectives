@@ -3,44 +3,45 @@
     using System.Collections.Generic;
     using Controller.DtoEntity;
     using Microsoft.AspNetCore.Mvc;
+    using LogicSingleton;
 
     [Route("api/[controller]")]
     [ApiController]
     public class ObjectiveController : ControllerBase {
         // GET api/Objective
         [HttpGet()]
-        public ActionResult<IEnumerable<string>> GetAll([FromQuery]int ItemsPerPage, [FromQuery]int Page) {
-            return new string[] { "Objective Get All" };
+        public ActionResult<List<Objective>> GetAll([FromQuery]int itemsPerPage, [FromQuery]int page) {
+            return Singleton.ObjectiveSelectAll.ExecuteSelectAll(itemsPerPage, page);
         }
 
         // GET api/Objective/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(Guid Id) {
-            return "Objective Get by Id";
+        public ActionResult<Objective> Get(Guid id) {
+            return Singleton.ObjectiveSelect.ExecuteSelect(id);
         }
 
         // POST api/Objective
         [HttpPost]
-        public ActionResult<string> Add([FromBody]Objective Objective) {
-            return "Objective Post";
+        public ActionResult<Guid> Add([FromBody]Objective objective) {
+            return Singleton.ObjectiveAdd.ExecuteAdd(objective);
         }
 
         // PUT api/Objective/5
-        [HttpPut("{Id}")]
-        public ActionResult<string> Update(Guid Id, [FromBody]Objective Objective) {
-            return "Objective Put";
+        [HttpPut]
+        public ActionResult<Objective> Update([FromBody]Objective objective) {
+            return Singleton.ObjectiveUpdate.ExecuteUpdate(objective);
         }
 
         // PATCH api/Objective/5
         [HttpPatch("{Id}")]
-        public ActionResult<string> UpdateStatus(Guid Id) {
-            return "Objective Patch";
+        public void UpdateStatus(Guid id) {
+            Singleton.ObjectiveUpdateStatus.ExecuteUpdateStatus(id);
         }
 
         // DELETE api/Objective/5
         [HttpDelete("{Id}")]
-        public ActionResult<string> Delete(Guid Id) {
-            return "Objective Delete";
+        public void Delete(Guid id) {
+            Singleton.ObjectiveDelete.ExecuteDelete(id);
         }
     }
 }

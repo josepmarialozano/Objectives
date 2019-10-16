@@ -2,6 +2,7 @@
     using Logics.Logic.TrainingType;
     using Logics.Logic.TrainingSensation;
     using Logics.Logic.Training;
+    using Logics.Logic.Objective;
 
     public class Singleton {
         #region TrainingType
@@ -143,6 +144,63 @@
                 if (_TrainingDelete == null)
                     _TrainingDelete = new TrainingDelete();
                 return _TrainingDelete;
+            }
+        }
+        #endregion
+
+        #region Objective
+        private static ObjectiveAdd _ObjectiveAdd;
+        private static ObjectiveSelectAll _ObjectiveSelectAll;
+        private static ObjectiveSelect _ObjectiveSelect;
+        private static ObjectiveUpdate _ObjectiveUpdate;
+        private static ObjectiveUpdateStatus _ObjectiveUpdateStatus;
+        private static ObjectiveDelete _ObjectiveDelete;
+
+        public static ObjectiveAdd ObjectiveAdd {
+            get {
+                if (_ObjectiveAdd == null)
+                    _ObjectiveAdd = new ObjectiveAdd();
+                return _ObjectiveAdd;
+            }
+        }
+
+        public static ObjectiveSelectAll ObjectiveSelectAll {
+            get {
+                if (_ObjectiveSelectAll == null)
+                    _ObjectiveSelectAll = new ObjectiveSelectAll();
+                return _ObjectiveSelectAll;
+            }
+        }
+
+        public static ObjectiveSelect ObjectiveSelect {
+            get {
+                if (_ObjectiveSelect == null)
+                    _ObjectiveSelect = new ObjectiveSelect();
+                return _ObjectiveSelect;
+            }
+        }
+
+        public static ObjectiveUpdate ObjectiveUpdate {
+            get {
+                if (_ObjectiveUpdate == null)
+                    _ObjectiveUpdate = new ObjectiveUpdate();
+                return _ObjectiveUpdate;
+            }
+        }
+
+        public static ObjectiveUpdateStatus ObjectiveUpdateStatus {
+            get {
+                if (_ObjectiveUpdateStatus == null)
+                    _ObjectiveUpdateStatus = new ObjectiveUpdateStatus();
+                return _ObjectiveUpdateStatus;
+            }
+        }
+
+        public static ObjectiveDelete ObjectiveDelete {
+            get {
+                if (_ObjectiveDelete == null)
+                    _ObjectiveDelete = new ObjectiveDelete();
+                return _ObjectiveDelete;
             }
         }
         #endregion

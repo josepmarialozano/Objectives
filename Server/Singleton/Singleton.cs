@@ -5,6 +5,8 @@
     using MongoDB.TrainingSensation;
     using Data.RepositoryInterface.Training;
     using Data.MongoDB.Training;
+    using Data.RepositoryInterface.Objective;
+    using Data.MongoDB.Objective;
 
     public class Singleton {
         #region TrainingType
@@ -145,6 +147,62 @@
                 if (_TrainingDelete == null)
                     _TrainingDelete = new TrainingDelete();
                 return _TrainingDelete;
+            }
+        }
+        #endregion
+        #region Objective
+        private static IObjectiveAdd _ObjectiveAdd;
+        private static IObjectiveSelect _ObjectiveSelect;
+        private static IObjectiveSelectAll _ObjectiveSelectAll;
+        private static IObjectiveUpdate _ObjectiveUpdate;
+        private static IObjectiveUpdateStatus _ObjectiveUpdateStatus;
+        private static IObjectiveDelete _ObjectiveDelete;
+
+        public static IObjectiveAdd ObjectiveAdd {
+            get {
+                if (_ObjectiveAdd == null)
+                    _ObjectiveAdd = new ObjectiveAdd();
+                return _ObjectiveAdd;
+            }
+        }
+
+        public static IObjectiveSelect ObjectiveSelect {
+            get {
+                if (_ObjectiveSelect == null)
+                    _ObjectiveSelect = new ObjectiveSelect();
+                return _ObjectiveSelect;
+            }
+        }
+
+        public static IObjectiveSelectAll ObjectiveSelectAll {
+            get {
+                if (_ObjectiveSelectAll == null)
+                    _ObjectiveSelectAll = new ObjectiveSelectAll();
+                return _ObjectiveSelectAll;
+            }
+        }
+
+        public static IObjectiveUpdate ObjectiveUpdate {
+            get {
+                if (_ObjectiveUpdate == null)
+                    _ObjectiveUpdate = new ObjectiveUpdate();
+                return _ObjectiveUpdate;
+            }
+        }
+
+        public static IObjectiveUpdateStatus ObjectiveUpdateStatus {
+            get {
+                if (_ObjectiveUpdateStatus == null)
+                    _ObjectiveUpdateStatus = new ObjectiveUpdateStatus();
+                return _ObjectiveUpdateStatus;
+            }
+        }
+
+        public static IObjectiveDelete ObjectiveDelete {
+            get {
+                if (_ObjectiveDelete == null)
+                    _ObjectiveDelete = new ObjectiveDelete();
+                return _ObjectiveDelete;
             }
         }
         #endregion

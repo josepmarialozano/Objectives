@@ -21,10 +21,12 @@ namespace TestDataEntity {
             Assert.AreEqual(Id, baseEntity.Id);
             Assert.AreEqual(Name, baseEntity.Name);
         }
+        
 
         [Test]
         public void TestObjective() {
             Objective objective = new Objective();
+            
         }
     }
 }

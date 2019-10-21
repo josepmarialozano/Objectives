@@ -29,7 +29,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Util", "Util", "{E29BD0B7-4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogicSingleton", "LogicSingleton\LogicSingleton.csproj", "{54FEE519-BBEF-46D5-9774-807CD12A475F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCommon", "TestCommon\TestCommon.csproj", "{5BC3C686-D9F7-4F7A-86D2-601505E7B7BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestCommon", "TestCommon\TestCommon.csproj", "{5BC3C686-D9F7-4F7A-86D2-601505E7B7BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDataEntity", "TestDataEntity\TestDataEntity.csproj", "{5C26D31C-F802-4B03-A426-27DF657F87A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +79,10 @@ Global
 		{5BC3C686-D9F7-4F7A-86D2-601505E7B7BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BC3C686-D9F7-4F7A-86D2-601505E7B7BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BC3C686-D9F7-4F7A-86D2-601505E7B7BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C26D31C-F802-4B03-A426-27DF657F87A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C26D31C-F802-4B03-A426-27DF657F87A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C26D31C-F802-4B03-A426-27DF657F87A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C26D31C-F802-4B03-A426-27DF657F87A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +98,7 @@ Global
 		{42ED980D-EE41-417C-A95F-FD0EBEA50AFD} = {E29BD0B7-4EDE-43CF-9935-EBC9AF9BE92B}
 		{54FEE519-BBEF-46D5-9774-807CD12A475F} = {FB5378A2-B86B-4A37-8855-CDF64D3807EA}
 		{5BC3C686-D9F7-4F7A-86D2-601505E7B7BC} = {E29BD0B7-4EDE-43CF-9935-EBC9AF9BE92B}
+		{5C26D31C-F802-4B03-A426-27DF657F87A3} = {146A0C72-FD98-41D3-99B6-5B450ECFDB42}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85E2E13D-8E6C-49B1-A14B-57C5CF7FE514}

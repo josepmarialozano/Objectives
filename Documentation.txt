@@ -38,22 +38,22 @@ Objective:
 	Finished			Boolean
 	
 Training:
-	Id					Guid
-	ObjectiveId			Guid
-	TrainingType		TrainingType
-	TrainingSensation	TrainingSensation
-	Name				String(100)
-	Description			String(2000)
-	TrainingDay			Int
-	TrainingMonth		Int
-	TrainingYear		Int
-	StartingHour		Int
-	StartingMinute		Int
-	StartingSecond		Int
-	TrainingHour		Int
-	TrainingMinute		Int
-	TrainingSecond		Int
-	Speed				Double
+	Id						Guid
+	ObjectiveId				Guid
+	TrainingType			TrainingType
+	TrainingSensation		TrainingSensation
+	Name					String(100)
+	Description				String(2000)
+	TrainingDay				Int
+	TrainingMonth			Int
+	TrainingYear			Int
+	TrainingHour			Int
+	TrainingMinute			Int
+	TrainingSecond			Int
+	TrainingLengthHours		Int
+	TrainingLengthMinutes	Int
+	TrainingLengthSeconds	Int
+	Speed					Double
 
 TrainingType:
 	Id					Guid
@@ -72,7 +72,7 @@ Objective:
 	Select All: ItemsPerPage optional, Page optional. Status 202. Return List of Objective
 	Delete: Id mandatory. Status 203. Return noContent. Delete only if it doesn't have trainings.
 Trainings:
-	Add: Name, TrainingMonth, TrainingYear, StartingHour, StartingMinute, TrainingHour, TrainingMinute, TrainingSecond, Speed mandatory, Description, StartingSecond optional. Status 200. Return Training.Id
+	Add: Name, TrainingMonth, TrainingYear, TrainingLengthHours, TrainingLengthMinutes, TrainingHour, TrainingMinute, TrainingSecond, Speed mandatory, Description, TrainingLengthSeconds optional. Status 200. Return Training.Id.
 	Update: TrainingType, TrainingSensation, Name, TrainingMonth, TrainingYear, StartingHour, StartingMinute, TrainingHour, TrainingMinute, TrainingSecond, Description, StartingSecond, Speed. Status 201. Return Training.
 	Select: Id mandatory. Status 202. Return Training
 	Select All: ObjectiveId mandatory, ItemsPerPage and Page optional. Status 202. Return List of Training

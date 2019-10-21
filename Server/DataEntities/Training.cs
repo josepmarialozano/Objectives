@@ -11,12 +11,12 @@ namespace Data.DataEntity {
         public int TrainingDay { get; set; }
         public int TrainingMonth { get; set; }
         public int TrainingYear { get; set; }
-        public int StartingHour { get; set; }
-        public int StartingMinute { get; set; }
-        public int StartingSecond { get;set; }
         public int TrainingHour { get; set; }
         public int TrainingMinute { get; set; }
         public int TrainingSecond { get; set; }
+        public int TrainingLengthHours { get; set; }
+        public int TrainingLengthMinutes { get; set; }
+        public int TrainingLengthSeconds { get;set; }
         public double Speed { get; set; }
     }
 }

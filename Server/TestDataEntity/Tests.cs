@@ -44,8 +44,7 @@ namespace TestDataEntity {
             BaseEntity baseEntity = new BaseEntity();
             AddAndAssertBaseEntityInfo(baseEntity);
         }
-
-
+        
         [Test]
         public void TestObjective() {
             string description = Guid.NewGuid().ToString();
